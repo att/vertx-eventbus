@@ -1,0 +1,24 @@
+{
+  "name": "vertx-eventbus",
+  "version": "1.0.0",
+  "description": "Minimal SockJS code to connect to SockJS vert.x event bus bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "dependencies": {
+    "node-sockjs-client": "1.0.7",
+    "node-uuid" : "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.research.att.com/pdragosh/vertx-eventbus.git"
+  },
+  "keywords": [
+    "vert.x",
+    "eventBus",
+    "SockJS"
+  ],
+  "author": "Pamela Dragosh",
+  "license": "MIT"
+}
