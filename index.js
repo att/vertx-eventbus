@@ -30,6 +30,13 @@ module.exports = {
 			//
 			var that = this;
 			//
+			// setup our constants
+			//
+			that.CONNECTING = CONNECTING;
+			that.CONNECTED = CONNECTED;
+			that.CLOSING = CLOSING;
+			that.CLOSED = CLOSED;
+			//
 			// Our variables
 			//
 		    var handlerMap = {};
@@ -220,10 +227,6 @@ module.exports = {
 		    		throw new Error('NOT Connected: ' + status);
 		    	}
 		    }
-	},
+	}
 	
-	CONNECTING : CONNECTING,
-	CONNECTED : CONNECTED,
-	CLOSING : CLOSING,
-	CLOSED : CLOSED
 };
