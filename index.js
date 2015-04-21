@@ -108,6 +108,10 @@ module.exports = {
 		          }
 		        }
 		    }
+		    
+		    that.status = function() {
+		    	return status;
+		    }
 		    //
 		    // our sockJS handlers
 		    //

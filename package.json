@@ -1,6 +1,6 @@
 {
   "name": "vertx-eventbus",
-  "version": "1.0.0",
+  "version": "0.2",
   "description": "Minimal SockJS code to connect to SockJS vert.x event bus bridge",
   "main": "index.js",
   "scripts": {

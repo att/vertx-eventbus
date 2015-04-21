@@ -21,6 +21,8 @@ eventbus.onopen = function() {
 		 console.log("Got message: " + JSON.stringify(message));
 		 
   });
+  
+  console.log("status: " + eventbus.status());
 
   eventbus.send('my-address', {'action': 'go', 'message': 'Hello World!'}, function(reply) {
     console.log("receive message: " + JSON.stringify(reply));
