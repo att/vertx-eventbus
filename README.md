@@ -10,3 +10,20 @@ However, that module was dependent on some unnecessary module (JSDOM) and anothe
 Thus, I re-wrote the module to utilize another sockjs module:
 
 https://github.com/humanchimp/node-sockjs-client
+
+###API
+
+
+
+###TEST
+
+####Server side test code
+You need an installation of vertx.io on you're local machine to start the server side test code.
+
+vertx run test/Server.java
+
+####Client side test code
+You need node installed on you're local machine to run the client side test code.
+
+node test/node-client.js
+
