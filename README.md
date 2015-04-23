@@ -11,11 +11,70 @@ Thus, I re-wrote the module to utilize another sockjs module:
 
 https://github.com/humanchimp/node-sockjs-client
 
-This reduced the dependency modules without losing any functionality.
+This reduced the dependency modules without losing any functionality. I did re-name a few things (i.e. CONNECTED instead of OPEN).
+
+###Installation
+
+Its a node module so refer to the latest node documentation for installation. You could simply add the following to you're package.json:
+
+`json
+  "dependencies": {
+    "vertx-eventbus" : "git+https://github.research.att.com/pdragosh/vertx-eventbus"
+`
+
+###Initialization
+
+Create an instance of the event bus:
+
+`
+var vertx = require('vertx-eventbus');
+var eventbus = new vertx.EventBus('http://localhost:8080/eventbus');
+
+`
 
 ###API
 
+####send
 
+`
+send(address, message, replyHandler)
+`
+
+
+####publish
+
+`
+publish(address, message)
+`
+
+####registerHandler
+
+`
+registerHandler(address, handler)
+`
+
+####unregisterHandler
+
+`
+unregisterHandler(address, handler)
+`
+
+####status
+
+`
+status()
+`
+
+
+###Callbacks
+
+####onopen
+
+This is called when SockJS has successfully connected to the vert.x eventbus bridge.
+
+####onclose
+
+This is called when SockJS has closed the connection to the vert.x eventbus bridge. Expect this to happen even with ping'ing occuring.
 
 ###TEST
 
@@ -25,7 +84,7 @@ You need an installation of vertx.io on you're local machine to start the server
 vertx run test/Server.java
 
 ####Client side test code
-You need node installed on you're local machine to run the client side test code.
+You need node.js installed on you're local machine to run the client side test code.
 
 node test/node-client.js
 
