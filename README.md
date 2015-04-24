@@ -17,54 +17,74 @@ This reduced the dependency modules without losing any functionality. I did re-n
 
 Its a node module so refer to the latest node documentation for installation. You could simply add the following to you're package.json:
 
-`json
+```json
   "dependencies": {
     "vertx-eventbus" : "git+https://github.research.att.com/pdragosh/vertx-eventbus"
-`
+```
 
 ###Initialization
 
 Create an instance of the event bus:
 
-`
+```
 var vertx = require('vertx-eventbus');
 var eventbus = new vertx.EventBus('http://localhost:8080/eventbus');
-
-`
+```
 
 ###API
 
 ####send
 
-`
+```
 send(address, message, replyHandler)
-`
-
+```
+address - vert.x event bus address you want the message to be sent to
+message - the message itself.
+replyHandler (optional) - an optional reply handler to call with the message reply
 
 ####publish
 
-`
+```
 publish(address, message)
-`
+```
+
+address - vert.x event bus address you want the message to be published to
+message - the message itself.
 
 ####registerHandler
 
-`
+```
 registerHandler(address, handler)
-`
+```
+
+Register's a handler for a specific address.
+
+address - the vert.x event bus address you want to receive messages
+handler - the handler that is called when a message is sent or published to you're address
 
 ####unregisterHandler
 
-`
+```
 unregisterHandler(address, handler)
-`
+```
+
+UNRegister's a handler for a specific address.
+
+address - the vert.x event bus address that was registered to receive messages
+handler - the associated handler that was registered with
 
 ####status
 
-`
+```
 status()
-`
+```
 
+Returns the current status of the connection:
+
+CONNECTING
+CONNECTED
+CLOSING
+CLOSED
 
 ###Callbacks
 
