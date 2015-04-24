@@ -40,9 +40,9 @@ var eventbus = new vertx.EventBus('http://localhost:8080/eventbus');
 send(address, message, replyHandler)
 ```
 
-address - vert.x event bus address you want the message to be sent to
-message - the message itself.
-replyHandler (optional) - an optional reply handler to call with the message reply
+* address - vert.x event bus address you want the message to be sent to
+* message - the message itself.
+* replyHandler (optional) - an optional reply handler to call with the message reply
 
 ####publish
 
@@ -50,8 +50,8 @@ replyHandler (optional) - an optional reply handler to call with the message rep
 publish(address, message)
 ```
 
-address - vert.x event bus address you want the message to be published to
-message - the message itself.
+* address - vert.x event bus address you want the message to be published to
+* message - the message itself.
 
 ####registerHandler
 
@@ -61,8 +61,8 @@ registerHandler(address, handler)
 
 Register's a handler for a specific address.
 
-address - the vert.x event bus address you want to receive messages
-handler - the handler that is called when a message is sent or published to you're address
+* address - the vert.x event bus address you want to receive messages
+* handler - the handler that is called when a message is sent or published to you're address
 
 ####unregisterHandler
 
@@ -72,8 +72,8 @@ unregisterHandler(address, handler)
 
 UNRegister's a handler for a specific address.
 
-address - the vert.x event bus address that was registered to receive messages
-handler - the associated handler that was registered with
+* address - the vert.x event bus address that was registered to receive messages
+* handler - the associated handler that was registered with
 
 ####status
 
@@ -83,10 +83,10 @@ status()
 
 Returns the current status of the connection:
 
-CONNECTING
-CONNECTED
-CLOSING
-CLOSED
+* CONNECTING
+* CONNECTED
+* CLOSING
+* CLOSED
 
 ###Callbacks
 
