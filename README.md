@@ -20,6 +20,7 @@ Its a node module so refer to the latest node documentation for installation. Yo
 ```json
   "dependencies": {
     "vertx-eventbus" : "git+https://github.research.att.com/pdragosh/vertx-eventbus"
+  }
 ```
 
 ###Initialization
@@ -38,6 +39,7 @@ var eventbus = new vertx.EventBus('http://localhost:8080/eventbus');
 ```
 send(address, message, replyHandler)
 ```
+
 address - vert.x event bus address you want the message to be sent to
 message - the message itself.
 replyHandler (optional) - an optional reply handler to call with the message reply
