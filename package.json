@@ -1,6 +1,6 @@
 {
   "name": "vertx-eventbus",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Minimal SockJS code to connect to SockJS vert.x event bus bridge",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.research.att.com/pdragosh/vertx-eventbus.git"
+    "url": "https://github.com/att/vertx-eventbus.git"
   },
   "keywords": [
     "vert.x",
