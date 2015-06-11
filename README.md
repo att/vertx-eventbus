@@ -19,7 +19,7 @@ Its a node module so refer to the latest node documentation for installation. Yo
 
 ```json
   "dependencies": {
-    "vertx-eventbus" : "git+https://github.research.att.com/pdragosh/vertx-eventbus"
+    "vertx-eventbus" : "git+https://github.com/att/vertx-eventbus"
   }
 ```
 
